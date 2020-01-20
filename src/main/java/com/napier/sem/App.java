@@ -101,21 +101,21 @@ public class App {
 //        }
 //    }
 
-//    // display employee information
-//    public void displayEmployee(Employee emp)
-//    {
-//        if (emp != null)
-//        {
-//            System.out.println(
-//                    emp.emp_no + " "
-//                            + emp.first_name + " "
-//                            + emp.last_name + "\n"
-//                            + emp.title + "\n"
-//                            + "Salary:" + emp.salary + "\n"
-//                            + emp.dept_name + "\n"
-//                            + "Manager: " + emp.manager + "\n");
-//        }
-//    }
+    // display employee information
+    public void displayEmployee(Employee emp)
+    {
+        if (emp != null)
+        {
+            System.out.println(
+                    emp.emp_no + " "
+                            + emp.first_name + " "
+                            + emp.last_name + "\n"
+                            + emp.title + "\n"
+                            + "Salary:" + emp.salary + "\n"
+                            + emp.dept_name + "\n"
+                            + "Manager: " + emp.manager + "\n");
+        }
+    }
 
     /**
      * Gets all the current employees and salaries.
@@ -176,5 +176,9 @@ public class App {
     public ArrayList<Employee> getSalariesByDepartment(Department dept) {
         return null;
     }
+    public Employee getEmployee(String Employee) {
+        return null;
+    }
+    public void displayEmployee(String Employee) { }
 }
 
