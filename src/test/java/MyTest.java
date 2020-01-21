@@ -9,4 +9,10 @@ class MyTest
     {
         assertEquals(5, 5);
     }
+    @Test
+    void unitTest2()
+    {
+        assertEquals(5, 4);
+    }
+
 }
