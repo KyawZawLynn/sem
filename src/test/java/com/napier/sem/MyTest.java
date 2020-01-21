@@ -18,16 +18,24 @@ public class MyTest
         app = new App();
     }
 
+//    @Test
+//    void printSalariesTestNull()
+//    {
+//        app.printSalaries(null);
+//    }
+
+//    @Test
+//    void printSalariesTestEmpty()
+//    {
+//        ArrayList<Employee> employess = new ArrayList<Employee>();
+//        app.printSalaries(employess);
+//    }
+
     @Test
-    void printSalariesTestNull()
-    {
-        app.printSalaries(null);
-    }
-    
-    @Test
-    void printSalariesTestEmpty()
+    void printSalariesTestContainsNull()
     {
         ArrayList<Employee> employess = new ArrayList<Employee>();
+        employess.add(null);
         app.printSalaries(employess);
     }
 
@@ -44,10 +52,13 @@ public class MyTest
         // Loop over all employees in the list
         for (Employee emp : employees)
         {
+            if (emp == null)
+                continue;
             String emp_string =
                     String.format("%-10s %-15s %-20s %-8s",
                             emp.emp_no, emp.first_name, emp.last_name, emp.salary);
             System.out.println(emp_string);
         }
     }
+
 }
