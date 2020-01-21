@@ -23,6 +23,14 @@ public class MyTest
     {
         app.printSalaries(null);
     }
+    
+    @Test
+    void printSalariesTestEmpty()
+    {
+        ArrayList<Employee> employess = new ArrayList<Employee>();
+        app.printSalaries(employess);
+    }
+
     public void printSalaries(ArrayList<Employee> employees)
     {
         // Check employees is not null
