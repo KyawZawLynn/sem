@@ -18,18 +18,18 @@ public class MyTest
         app = new App();
     }
 
-//    @Test
-//    void printSalariesTestNull()
-//    {
-//        app.printSalaries(null);
-//    }
+    @Test
+    void printSalariesTestNull()
+    {
+        app.printSalaries(null);
+    }
 
-//    @Test
-//    void printSalariesTestEmpty()
-//    {
-//        ArrayList<Employee> employess = new ArrayList<Employee>();
-//        app.printSalaries(employess);
-//    }
+    @Test
+    void printSalariesTestEmpty()
+    {
+        ArrayList<Employee> employess = new ArrayList<Employee>();
+        app.printSalaries(employess);
+    }
 
     @Test
     void printSalariesTestContainsNull()
@@ -37,6 +37,20 @@ public class MyTest
         ArrayList<Employee> employess = new ArrayList<Employee>();
         employess.add(null);
         app.printSalaries(employess);
+    }
+
+    @Test
+    void printSalaries()
+    {
+        ArrayList<Employee> employees = new ArrayList<Employee>();
+        Employee emp = new Employee();
+        emp.emp_no = 1;
+        emp.first_name = "Kyaw";
+        emp.last_name = "Zaw Lynn";
+        emp.title = "Gentleman";
+        emp.salary = 55000;
+        employees.add(emp);
+        app.printSalaries(employees);
     }
 
     public void printSalaries(ArrayList<Employee> employees)
